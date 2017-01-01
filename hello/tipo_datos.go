@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"unsafe"
 )
 
 func main() {
@@ -32,6 +33,25 @@ func main() {
 	fmt.Println(uentero8, uentero16, uentero32, uentero64)
 	fmt.Println("Alias de variables \n ===========================")
 	fmt.Println(enteroByte, enteroRune)
-	fmt.Println("Depende de la plataforma donde corre el programa \n ==================================================")
+	fmt.Println("Depende de la plataforma donde corre el programa \n ===============================================")
 	fmt.Println(enteroUint, enteroInt, enteroUintptr)
+
+	//Conversion de variables
+	entero32 = 25
+	entero64 = 85
+	fmt.Println(entero32 + int32(entero64))
+
+	enteroRune = 43
+	fmt.Println(entero32 + enteroRune)
+
+	enteroInt = 74
+	fmt.Println(entero32 + int32(enteroInt))
+
+	fmt.Println(unsafe.Sizeof(enteroInt), unsafe.Sizeof(entero32))
+
+	//var flotante32 float32 //el conjunto de todos los números IEEE-754 de coma flotante de 32 bits
+	//var flotante64 float64 //el conjunto de todos los números IEEE-754 de coma flotante de 64 bits
+
+	//var complejo64 complex64   //el conjunto de todos los números complejos float32 con partes real e imaginaria
+	//var complejo128 complex128 //el conjunto de todos los números complejos float64 con partes real e imaginaria
 }
