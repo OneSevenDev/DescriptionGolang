@@ -26,4 +26,7 @@ func main() {
 	fmt.Println(c, "\t <= \t", b, "\t ->\t ", c <= b)
 	fmt.Println(a, "\t > \t", b, "\t ->\t ", a > b)
 	fmt.Println(a, "\t >= \t", b, "\t ->\t ", a >= b)
+
+	fmt.Println("\t Operadores de Asignacion \n", "****************************************")
+	fmt.Println(a,"\t -> \t", a+=b)
 }
